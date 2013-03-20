@@ -1,8 +1,8 @@
-/* jQuery elementReady plugin
- * Version 0.6+
- * Copyright (C) 2007-13 Bennett McElwee.
- * Licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License (http://creativecommons.org/licenses/by-sa/3.0/)
- * Permissions beyond the scope of this license may be available at http://www.thunderguy.com/semicolon/.
+/* jQuery waitFor plugin
+ * Version 0.1.0
+ * Copyright (c) 2007-13 Bennett McElwee.
+ * Licensed under the MIT licence.
+ * Permissions beyond the scope of this license may be available via http://www.thunderguy.com/semicolon/
  */
 
 /*
@@ -20,25 +20,20 @@
 /**
  * While a page is loading, call a given callback function as soon as any elements
  * matching a specific selector are loaded into the DOM, even before the full DOM
- * has been loaded. Executes the function within the context of each element. This
- * means that when the passed-in function is executed, the 'this' keyword points
- * to the specific DOM element.
+ * has been loaded. Do this by calling waitFor(), and then calling done(function() {...})
+ * on the result. Call fail(function() {...}) to trigger a callback if the element
+ * has not appeared by the time the full DOM is loaded.
  *
- * The function returns 'this', so you can chain multiple calls to
- * elementReady(). (This is probably not particularly useful though.)
- *
- * One argument is passed to the callback: a reference to the jQuery object.
- * You can name this argument $ and therefore use the $ alias even in
- * noConflict mode.
+ * One argument is passed to the callback: a jQuery object containing the new elements.
  *
  * If no matching element has been found by the time the DOM is fully loaded, then
- * the function will not be called.
+ * the fail() functions will be called.
  *
  * The function works by polling the DOM at short intervals. By default it polls
  * every 23 milliseconds, but you can change this by setting
- * $.elementReady.defaultIntervalMs before calling $.elementReady().
+ * $.waitFor.defaultIntervalMs before calling $.waitFor().
  * Alternatively you can pass something like {intervalMs: 100} as the third argument
- * the first time you call $.elementReady().
+ * the first time you call $.waitFor().
  * Don't bother changing this unless you really know what you're doing.
  *
  * @example
