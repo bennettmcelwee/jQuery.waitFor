@@ -19,8 +19,8 @@
             "url": "https://raw.github.com/bennettmcelwee/jQuery.waitFor/master/MIT-LICENSE.txt"
         }
     ],
-    "homepage": "https://github.com/bennettmcelwee/jQuery.waitFor",
-    "docs": "https://github.com/bennettmcelwee/jQuery.waitFor",
+    "homepage": "http://thunderguy.com/semicolon/2013/04/02/jquery-waitfor-plugin/",
+    "docs": "http://thunderguy.com/semicolon/2013/04/02/jquery-waitfor-plugin/",
     "bugs": "https://github.com/bennettmcelwee/jQuery.waitFor/issues",
     "dependencies": {
         "jquery": ">=1.8"
